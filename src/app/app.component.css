@@ -1,0 +1,11 @@
+.json-log {
+  border: 1px solid lightgrey;
+  background-color: lightgoldenrodyellow;
+  padding: 5px;
+  cursor: default;
+}
+
+.json-log .json-data {
+  margin-top: 10px;
+  font-family: monospace;
+}

@@ -1,0 +1,35 @@
+.membership-plot {
+  /* border: 1px solid lightblue; */
+  background-color: rgb(244, 252, 255);
+  height: 50px;
+  line-height: 50px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.fuzzy-area,
+.core-area {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+}
+
+.fuzzy-area {
+  background-image: linear-gradient(
+    146deg,
+    #ccf5ff 25%,
+    #a8e6ff 25%,
+    #a8e6ff 50%,
+    #ccf5ff 50%,
+    #ccf5ff 75%,
+    #a8e6ff 75%,
+    #a8e6ff 100%
+  );
+  background-size: 10.73px 7.24px;
+}
+
+.core-area {
+  background-color: #71d6ff;
+  color: #064b69;
+  text-align: center;
+}
