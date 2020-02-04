@@ -31,12 +31,12 @@ export class AppComponent {
     const numOfFns = randomInt(3, 11);
 
     for (let i = 0; i < numOfFns; i++) {
-      // First function should not have pre-fuzzy area
-      // Pre-fuzzy area should intersect with previous post-fuzzy area (except first function)
+      // First function should not have left fuzzy area
+      // Left-fuzzy area should intersect with previous right-fuzzy area (except first function)
       const upperStart = i > 0 ? newData[i - 1].upperTop2 : 0;
       const upperTop1 = i > 0 ? newData[i - 1].upperEnd : 0;
       const upperTop2 = upperTop1 + randomInt(10000, 100000);
-      // Last function should not have post fuzzy area
+      // Last function should not have right fuzzy area
       const upperEnd = upperTop2 + (i < numOfFns - 1 ? randomInt(10000, 30000) : 0);
 
       // Ignoring 'lower' values for this exercise. 

@@ -1,6 +1,7 @@
 <div *ngFor="let fn of memberships" class="membership-plot" title="Click to see details"
     (click)="onMembershipClick(fn)">
-    <span [ngStyle]="{'margin-left': fn.preFuzzyStart, 'width': fn.preFuzzyWidth}" class="fuzzy-area"></span>
+    <span [ngStyle]="{'margin-left': fn.leftFuzzyStart, 'width': fn.leftFuzzyWidth}"
+        class="fuzzy-area fuzzy-area-left"></span>
     <span [style.width]="fn.coreWidth" class="core-area">{{fn.name}}</span>
-    <span [style.width]="fn.postFuzzyWidth" class="fuzzy-area"></span>
+    <span [style.width]="fn.rightFuzzyWidth" class="fuzzy-area fuzzy-area-right"></span>
 </div>

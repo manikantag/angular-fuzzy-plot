@@ -13,12 +13,12 @@ import Membership from '../model/Membership';
 })
 export class FuzzyGraphComponent {
 
-  _memberships: [Membership];
+  _memberships: Membership[];
 
   /**
    * Calculate required values from the given fuzzy set.
    */
-  @Input() set memberships(newMemberships: [Membership]) {
+  @Input() set memberships(newMemberships: Membership[]) {
     // Get the minimum & maximum values in our dataset as the plot
     // needs to adjusted with all inbetween values with in this range.
     const firstFnUpperStart = newMemberships[0].upperStart;
@@ -41,10 +41,10 @@ export class FuzzyGraphComponent {
       const coreAreaEnd = valueToRangeMapper(membership.upperTop2);
 
       // Calculate different dimensions required for the plot
-      membership.preFuzzyStart = fuzzyAreaStart + '%';
-      membership.preFuzzyWidth = (coreAreaStart - fuzzyAreaStart) + '%';
+      membership.leftFuzzyStart = fuzzyAreaStart + '%';
+      membership.leftFuzzyWidth = (coreAreaStart - fuzzyAreaStart) + '%';
       membership.coreWidth = (coreAreaEnd - coreAreaStart) + '%';
-      membership.postFuzzyWidth = (fuzzyAreaEnd - coreAreaEnd) + '%';
+      membership.rightFuzzyWidth = (fuzzyAreaEnd - coreAreaEnd) + '%';
     });
 
     this._memberships = newMemberships;

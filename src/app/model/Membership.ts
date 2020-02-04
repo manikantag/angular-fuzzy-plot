@@ -15,8 +15,8 @@ export default interface Membership {
     upperEnd: number;
 
     // Optional properties, which will be used for plot dimension computation
-    preFuzzyStart?: string;
-    preFuzzyWidth?: string;
+    leftFuzzyStart?: string;
+    leftFuzzyWidth?: string;
     coreWidth?: string;
-    postFuzzyWidth?: string;
+    rightFuzzyWidth?: string;
 }
