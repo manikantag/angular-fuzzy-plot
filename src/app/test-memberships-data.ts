@@ -1,4 +1,9 @@
-const data = [
+import Membership from './model/Membership';
+
+/**
+ * Initial test Memberships data.
+ */
+const data: Membership[] = [
   {
     name: "Low",
     lowerStart: 4000.0,
